@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard — Partner Portal</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="brand"><img class="logo" src="https://easyeasytour.com/wp-content/uploads/2025/10/pin.png" alt=""><h1>Easy Easy Tour</h1></div></header>
+<main class="main-wrap">
+  <h2>Partner Dashboard</h2>
+
+  <section class="grid cards" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <article class="card"><h3 class="note">Today's Bookings</h3><h2 style="margin:0;color:var(--teal)">6</h2></article>
+    <article class="card"><h3 class="note">Total Earnings</h3><h2 style="margin:0;color:var(--teal)">฿27,800</h2></article>
+    <article class="card"><h3 class="note">Active Tours</h3><h2 style="margin:0;color:var(--teal)">5</h2></article>
+    <article class="card"><h3 class="note">Messages</h3><h2 style="margin:0;color:var(--teal)">3</h2></article>
+  </section>
+
+  <section class="tabs">
+    <a class="tab active" href="#tours">My Tours</a>
+    <a class="tab" href="#bookings">Bookings</a>
+    <a class="tab" href="#payments">Payments</a>
+    <a class="tab" href="#messages">Messages</a>
+    <a class="tab" href="#settings">Settings</a>
+  </section>
+
+  <section id="tours" class="form-card">
+    <h3>My Tours</h3>
+    <p class="note">Manage your active and draft tours.</p>
+    <div class="form-row" style="justify-content:flex-end"><a class="btn teal" href="tour-setup.html">+ New Tour</a></div>
+    <ul>
+      <li><strong>4 Islands Snorkeling</strong> — Next slot today 08:00 (Cap 12)</li>
+      <li><strong>Sunset Longtail</strong> — Today 17:30 (Cap 10)</li>
+      <li><strong>Hong Islands</strong> — Tomorrow 09:00 (Cap 8)</li>
+    </ul>
+  </section>
+
+  <section id="bookings" class="form-card">
+    <h3>Bookings</h3>
+    <p class="note">Calendar + list of upcoming bookings.</p>
+    <div class="form-row">
+      <select><option>All tours</option><option>4 Islands Snorkeling</option><option>Sunset Longtail</option></select>
+      <input placeholder="Search name / date">
+    </div>
+    <div class="calendar" style="margin-top:.8rem">
+      <div class="day"><div class="d">1</div></div>
+      <div class="day"><div class="d">2</div><div class="slot"><span>08:00 • 6/12</span></div></div>
+      <div class="day"><div class="d">3</div><div class="slot"><span>13:30 • 4/8</span></div></div>
+      <div class="day"><div class="d">4</div></div>
+      <div class="day"><div class="d">5</div><div class="slot"><span>08:00 • 12/12</span></div></div>
+      <div class="day"><div class="d">6</div></div>
+      <div class="day"><div class="d">7</div></div>
+    </div>
+    <h4 style="margin-top:1rem">Upcoming</h4>
+    <ul>
+      <li>Mar 2 — 4 Islands Snorkeling — 08:00 — 6 guests — John S.</li>
+      <li>Mar 3 — Kayak Adventure — 13:30 — 4 guests — Maria L.</li>
+    </ul>
+  </section>
+
+  <section id="payments" class="form-card">
+    <h3>Payments</h3>
+    <ul class="note">
+      <li>฿4,200 — 2025-10-12 — Payout to bank ****1289</li>
+      <li>฿9,600 — 2025-10-05 — Payout to bank ****1289</li>
+    </ul>
+    <a class="btn teal" href="#">Add payout method</a>
+  </section>
+
+  <section id="messages" class="form-card">
+    <h3>Messages</h3>
+    <p class="note">In-app chat coming soon.</p>
+  </section>
+
+  <section id="settings" class="form-card">
+    <h3>Settings</h3>
+    <div class="form-row">
+      <div class="input"><label>Language</label>
+        <select><option>English</option><option>ไทย (Thai)</option><option>Русский</option><option>中文</option><option>Deutsch</option><option>Español</option><option>Français</option></select>
+      </div>
+      <div class="input"><label>Change password</label><input type="password" placeholder="New password"></div>
+    </div>
+    <a class="btn teal" href="#">Save settings</a>
+  </section>
+
+  <a class="btn ghost return" href="/">← Return Home</a>
+</main>
+<footer class="site-footer">© 2025 Easy Easy Tour — Connecting travelers with authentic Thailand | www.easyeasytour.com</footer>
+</body>
+</html>
