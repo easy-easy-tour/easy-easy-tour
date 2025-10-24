@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Availability — Partner Portal</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="brand"><img class="logo" src="https://easyeasytour.com/wp-content/uploads/2025/10/pin.png" alt=""><h1>Easy Easy Tour</h1></div></header>
+<main class="main-wrap">
+  <h2>Availability & Capacity</h2>
+  <p class="note">Add multiple time slots per day and set a maximum number of bookings to prevent overbooking.</p>
+  <section class="form-card">
+    <div class="form-row" style="align-items:center;justify-content:space-between">
+      <div class="form-row" style="align-items:center">
+        <strong style="margin-right:.5rem">Month:</strong>
+        <select id="monthSel"></select>
+        <select id="yearSel"></select>
+      </div>
+      <div class="form-row">
+        <button class="btn ghost" id="blockDay">Block selected day</button>
+        <button class="btn teal" id="addSlotBtn">Add time slot</button>
+      </div>
+    </div>
+    <div class="calendar" id="calGrid"></div>
+    <div class="form-card" style="margin-top:1rem">
+      <h3 style="margin:.2rem 0 .6rem">Selected day schedule</h3>
+      <div id="slotList" class="note">Select a date to view or add time slots.</div>
+      <div class="form-row">
+        <div class="input"><label>Start</label><input id="slotStart" placeholder="08:00"></div>
+        <div class="input"><label>End</label><input id="slotEnd" placeholder="12:30"></div>
+        <div class="input"><label>Max bookings</label><input id="slotCap" placeholder="12"></div>
+      </div>
+      <button class="btn teal" id="saveSlot">Save slot</button>
+    </div>
+    <div class="form-row" style="justify-content:flex-end;margin-top:1rem">
+      <a class="btn coral" href="policy.html">Continue → Booking Policy</a>
+    </div>
+  </section>
+  <a class="btn ghost return" href="/">← Return Home</a>
+</main>
+<footer class="site-footer">© 2025 Easy Easy Tour — Connecting travelers with authentic Thailand | www.easyeasytour.com</footer>
+<script type="module">
+  import { initCalendar } from "../js/main.js";
+  initCalendar();
+</script>
+</body>
+</html>
