@@ -1,128 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Easy Easy Tour</title>
-<style>
-  html { scroll-behavior: smooth; }
-  body { margin: 0; font-family: 'Segoe UI', sans-serif; color: #333; }
-  header { display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-  header img { width: 45px; height: 45px; object-fit: contain; }
-  header h1 { color: #00B3B3; margin: 0; font-size: 24px; }
-  nav a { margin: 0 10px; text-decoration: none; color: #333; font-weight: 500; }
-  nav a:hover { color: #00B3B3; }
-  header button { margin-left: 10px; border: none; padding: 10px 18px; border-radius: 25px; cursor: pointer; }
-  .join { background: #FF6633; color: white; }
-  .hero { background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url('krabi-2.png'); background-size: cover; background-position: center; text-align: center; padding: 100px 20px; }
-  .hero h2 { color: #00B3B3; font-size: 36px; margin-bottom: 15px; }
-  .search-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 600px; margin: 0 auto; }
-  .search-bar input { flex: 1; padding: 12px 15px; border-radius: 25px; border: 1px solid #ccc; min-width: 120px; }
-  .search-bar button { background: #00B3B3; color: white; border: none; border-radius: 25px; padding: 12px 30px; cursor: pointer; }
-  .hero p { font-style: italic; color: #555; margin-top: 15px; }
-  .hero .partner { margin-top: 25px; background: #FF6633; color: white; border-radius: 25px; padding: 12px 30px; border: none; cursor: pointer; }
-  section { text-align: center; padding: 60px 20px; }
-  h3 { color: #00B3B3; font-size: 28px; margin-bottom: 30px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
-  .card { background: white; border-radius: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; }
-  .card img { width: 100%; height: 200px; object-fit: cover; }
-  .card h4 { color: #00B3B3; margin: 15px 0; }
-  .card button { border: none; padding: 8px 15px; border-radius: 20px; color: white; margin: 5px; cursor: pointer; }
-  .view { background: #00B3B3; }
-  .book { background: #FF6633; }
-  .partners { background: #00B3B3; color: white; padding: 80px 20px; }
-  .partners h3 { color: white; }
-  .partners p { max-width: 700px; margin: 0 auto 30px; line-height: 1.6; }
-  .partners button { background: #FF6633; color: white; border: none; padding: 14px 30px; border-radius: 30px; cursor: pointer; }
-  .contact { background: #f6f6f6; }
-  form { max-width: 600px; margin: 0 auto; text-align: left; }
-  label { display: block; margin: 10px 0 5px; color: #333; }
-  input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
-  textarea { resize: vertical; height: 120px; }
-  .submit-btn { background: #00B3B3; color: white; border: none; padding: 12px 30px; border-radius: 25px; cursor: pointer; display: block; margin: 20px auto 0; }
-  footer { background: #eaeaea; text-align: center; padding: 20px; font-size: 14px; color: #666; }
-  @media(max-width:600px){
-    .hero h2 { font-size: 28px; }
-    .search-bar { flex-direction: column; }
-    nav { display: none; }
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
-<header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="pin.png" alt="Logo">
+<body class="home">
+<header class="site-header">
+  <div class="brand">
+    <img class="logo" src="https://easyeasytour.com/wp-content/uploads/2025/10/pin.png" alt="Easy Easy Tour">
     <h1>Easy Easy Tour</h1>
   </div>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#explore">Explore Thailand</a>
+    <a href="#explore">Explore</a>
     <a href="#partners">Partners</a>
-    <a href="#contact">Contact Us</a>
+    <a href="/partner/index.html" class="btn coral">Partner Portal</a>
   </nav>
-  <div>
-    <button>Login</button>
-    <button class="join">Join</button>
-  </div>
 </header>
 
-<section class="hero" id="home">
+<section class="hero" style="--hero:url('https://easyeasytour.com/wp-content/uploads/2025/10/krabi-2.png')">
   <h2>Find your next adventure</h2>
-  <div class="search-bar">
-    <input type="text" placeholder="Where to?">
-    <input type="text" placeholder="What to do?">
-    <button>Search</button>
+  <div class="search">
+    <input placeholder="Where to?">
+    <input placeholder="What to do?">
+    <button class="btn teal">Search</button>
   </div>
-  <p>“The official travel connector for tourists in Thailand — one scan to explore, book, and go.”</p>
-  <button class="partner">Join as a Local Partner</button>
+  <p class="tagline">“The official travel connector for tourists in Thailand — one scan to explore, book, and go.”</p>
+  <a class="btn coral" href="/partner/index.html">Join as a Local Partner</a>
 </section>
 
-<section id="explore">
-  <h3>Explore Thailand</h3>
-  <div class="grid">
-    <div class="card">
-      <img src="krabi-1.png" alt="Krabi">
-      <h4>Krabi</h4>
-      <button class="view">View Tours</button>
-      <button class="book">Book Now</button>
+<section id="explore" class="grid cards">
+  <article class="card">
+    <img src="https://easyeasytour.com/wp-content/uploads/2025/10/krabi-1.png" alt="Krabi">
+    <h3>Krabi</h3>
+    <div class="actions">
+      <a class="btn teal" href="#">View Tours</a>
+      <a class="btn coral" href="#">Book Now</a>
     </div>
-    <div class="card">
-      <img src="phuket-1.jpg" alt="Phuket">
-      <h4>Phuket</h4>
-      <button class="view">View Tours</button>
-      <button class="book">Book Now</button>
+  </article>
+  <article class="card">
+    <img src="https://easyeasytour.com/wp-content/uploads/2025/10/phuket-1.jpg" alt="Phuket">
+    <h3>Phuket</h3>
+    <div class="actions">
+      <a class="btn teal" href="#">View Tours</a>
+      <a class="btn coral" href="#">Book Now</a>
     </div>
-    <div class="card">
-      <img src="samui.jpg" alt="Koh Samui">
-      <h4>Koh Samui</h4>
-      <button class="view">View Tours</button>
-      <button class="book">Book Now</button>
+  </article>
+  <article class="card">
+    <img src="https://easyeasytour.com/wp-content/uploads/2025/10/samui.jpg" alt="Koh Samui">
+    <h3>Koh Samui</h3>
+    <div class="actions">
+      <a class="btn teal" href="#">View Tours</a>
+      <a class="btn coral" href="#">Book Now</a>
     </div>
-  </div>
+  </article>
 </section>
 
-<section class="partners" id="partners">
+<section id="partners" class="cta teal-bg">
   <h3>Join as a Local Partner</h3>
-  <p>Partner with Easy Easy Tour to showcase your unique tours, activities, and experiences to a global audience. Whether you’re a local guide, adventure company, or cultural host — we help travelers discover you and book directly through our platform.</p>
-  <button>Become a Partner</button>
+  <p>Showcase your tours, activities, and authentic experiences to travelers exploring Thailand.</p>
+  <a class="btn coral" href="/partner/index.html">Get Started</a>
 </section>
 
-<section class="contact" id="contact">
-  <h3>Contact Us</h3>
-  <form>
-    <label for="name">Your Name</label>
-    <input type="text" id="name" name="name" required>
-    <label for="email">Email Address</label>
-    <input type="email" id="email" name="email" required>
-    <label for="message">Message</label>
-    <textarea id="message" name="message" required></textarea>
-    <button type="submit" class="submit-btn">Send Message</button>
-  </form>
-</section>
-
-<footer>© 2025 Easy Easy Tour — Connecting travelers with authentic Thailand | www.easyeasytour.com</footer>
-
+<footer class="site-footer">
+  © 2025 Easy Easy Tour — Connecting travelers with authentic Thailand | www.easyeasytour.com
+</footer>
 </body>
 </html>
